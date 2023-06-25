@@ -1,0 +1,28 @@
+@import "styles/_var.scss";
+@import "styles/_breakpoints.scss";
+
+.finder {
+  align-items: center;
+  background-color: $grey;
+  border-radius: 5px;
+  display: flex;
+  gap: 1.8rem;
+  height: 4.2rem;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  width: 40rem;
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+  input {
+    background-color: $grey;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    outline: none;
+    width: 100%;
+    &::placeholder {
+      color: #4c4d5e;
+    }
+  }
+}
