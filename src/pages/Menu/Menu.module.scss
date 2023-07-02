@@ -1,62 +1,7 @@
-@import "styles/_var.scss";
-@import "styles/_breakpoints.scss";
-
-.menu {
-  padding: 20px $padding-width;
-  @media (max-width: $desktop_xsm) {
-    padding: 20px $padding-width-mobile;
-  }
-  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
-    padding: 20px $padding-width-sm;
-  }
-  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
-    padding: 20px $padding-width-md;
-  }
-}
-
-.header {
-  height: 30rem;
-  background-image: url("/assets/menu/header.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  padding: 0 $padding-width;
-  @media (max-width: $desktop_xsm) {
-    padding: 0px $padding-width-mobile;
-  }
-  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
-    padding: 0px $padding-width-sm;
-  }
-  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
-    padding: 0px $padding-width-md;
-  }
-  &__text {
-    color: antiquewhite;
-    font-size: 5rem;
-    min-width: 40rem;
-    width: 40%;
-  }
-}
+@import 'styles/_var.scss';
+@import 'styles/_breakpoints.scss';
 
 .card {
-  padding: 5rem $padding-width;
-  @media (max-width: $desktop_xsm) {
-    padding: 5rem $padding-width-mobile;
-  }
-  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
-    padding: 5rem $padding-width-sm;
-  }
-  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
-    padding: 5rem $padding-width-md;
-  }
-
-  &__title {
-    color: $dark;
-    font-size: 3rem;
-    margin-bottom: 3rem;
-  }
-
   &__filters {
     align-items: center;
     display: flex;

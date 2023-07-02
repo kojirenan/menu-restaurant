@@ -1,7 +1,8 @@
-import styles from "./Items.module.scss";
-import menu from "./items.json";
-import Item from "./Item";
-import { useEffect, useState } from "react";
+import styles from './Items.module.scss';
+import menu from 'data/menu.json';
+import Item from './Item';
+import { useEffect, useState } from 'react';
+import { Menu } from 'types/IDishes';
 
 interface PropsItems {
   find: string;
@@ -20,7 +21,7 @@ function Items({ find, filter, computer }: PropsItems) {
   }, [find, filter, computer]);
 
   function finderTest(title: string) {
-    const regex = new RegExp(find, "i");
+    const regex = new RegExp(find, 'i');
     return regex.test(title);
   }
 
@@ -31,13 +32,13 @@ function Items({ find, filter, computer }: PropsItems) {
     return true;
   }
 
-  function order(newList: typeof menu) {
+  function order(newList: Menu) {
     switch (computer) {
-      case "porcao":
+      case 'porcao':
         return newList.sort((a, b) => (a.size > b.size ? 1 : -1));
-      case "qtd_pessoas":
+      case 'qtd_pessoas':
         return newList.sort((a, b) => (a.serving > b.serving ? 1 : -1));
-      case "preco":
+      case 'preco':
         return newList.sort((a, b) => (a.price > b.price ? 1 : -1));
       default:
         return newList;

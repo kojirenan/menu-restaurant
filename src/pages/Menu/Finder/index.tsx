@@ -1,5 +1,5 @@
-import styles from "./Finder.module.scss";
-import { CgSearch } from "react-icons/cg";
+import styles from './Finder.module.scss';
+import { CgSearch } from 'react-icons/cg';
 
 interface PropsFinder {
   find: string;

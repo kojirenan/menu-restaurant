@@ -1,6 +1,6 @@
-import filters from "./filters.json";
-import styles from "./Filters.module.scss";
-import classNames from "classnames";
+import filters from './filters.json';
+import styles from './Filters.module.scss';
+import classNames from 'classnames';
 
 type IOption = (typeof filters)[0];
 interface PropsFilters {
@@ -21,7 +21,7 @@ function Filters({ filter, setFilter }: PropsFilters) {
         <button
           className={classNames({
             [styles.filters__filter]: true,
-            [styles["filters__filter--active"]]: filter === option.id,
+            [styles['filters__filter--active']]: filter === option.id,
           })}
           key={option.id}
           onClick={() => selectFilter(option)}

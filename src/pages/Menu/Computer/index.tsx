@@ -1,8 +1,8 @@
-import { useState } from "react";
-import styles from "./Computer.module.scss";
-import options from "./options.json";
-import classNames from "classnames";
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import { useState } from 'react';
+import styles from './Computer.module.scss';
+import options from './options.json';
+import classNames from 'classnames';
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 
 interface PropsComputer {
   computer: string;
@@ -18,12 +18,12 @@ function Computer({ computer, setComputer }: PropsComputer) {
     <button
       className={classNames({
         [styles.computer]: true,
-        [styles["computer--active"]]: computer !== "",
+        [styles['computer--active']]: computer !== '',
       })}
       onClick={() => setOpen(!open)}
       onBlur={() => setOpen(false)}
     >
-      <span>{nameComputer || "Ordernar Por"}</span>
+      <span>{nameComputer || 'Ordernar Por'}</span>
       {open ? (
         <MdKeyboardArrowUp size={20} />
       ) : (
@@ -32,7 +32,7 @@ function Computer({ computer, setComputer }: PropsComputer) {
       <div
         className={classNames({
           [styles.computer__options]: true,
-          [styles["computer__options--active"]]: open,
+          [styles['computer__options--active']]: open,
         })}
       >
         {options.map((option) => (

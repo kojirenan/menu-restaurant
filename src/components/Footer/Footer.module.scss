@@ -1,0 +1,18 @@
+@import 'styles/_var.scss';
+@import 'styles/_breakpoints.scss';
+
+.footer {
+  background-color: $red;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem $padding-width;
+  @media (max-width: $desktop_xsm) {
+    padding: 1rem $padding-width-mobile;
+  }
+  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+    padding: 1rem $padding-width-sm;
+  }
+  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+    padding: 1rem $padding-width-md;
+  }
+}
