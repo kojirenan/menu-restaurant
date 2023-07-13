@@ -2,6 +2,7 @@ import DishesTags from 'components/DishesTags';
 import styles from './Item.module.scss';
 import { Dish } from 'types/IDishes';
 import { useNavigate } from 'react-router-dom';
+import { memo } from 'react';
 
 function Item(props: Dish) {
   const { title, description, id, photo } = props;
@@ -27,4 +28,4 @@ function Item(props: Dish) {
   );
 }
 
-export default Item;
+export default memo(Item);

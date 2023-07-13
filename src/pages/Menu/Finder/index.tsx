@@ -1,3 +1,4 @@
+import { memo, useMemo } from 'react';
 import styles from './Finder.module.scss';
 import { CgSearch } from 'react-icons/cg';
 
@@ -7,6 +8,7 @@ interface PropsFinder {
 }
 
 function Finder({ find, setFind }: PropsFinder) {
+  const searchIcon = useMemo(() => <CgSearch size={20} color="#4C4D5E" />, []);
   return (
     <div className={styles.finder}>
       <input
@@ -14,9 +16,9 @@ function Finder({ find, setFind }: PropsFinder) {
         onChange={(e) => setFind(e.target.value)}
         placeholder="Buscar"
       />
-      <CgSearch size={20} color="#4C4D5E" />
+      {searchIcon}
     </div>
   );
 }
 
-export default Finder;
+export default memo(Finder);

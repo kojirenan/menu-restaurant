@@ -1,10 +1,12 @@
-import About from 'pages/About';
 import App from 'pages/Default';
-import Dish from 'pages/Dish';
-import Home from 'pages/Home';
-import Menu from 'pages/Menu';
-import NotFound from 'pages/NotFound';
+import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
+
+const About = lazy(() => import('pages/About'));
+const Dish = lazy(() => import('pages/Dish'));
+const Home = lazy(() => import('pages/Home'));
+const Menu = lazy(() => import('pages/Menu'));
+const NotFound = lazy(() => import('pages/NotFound'));
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: '/sobre',
         element: <About />,
+      },
+      {
+        path: '/prato/:id',
+        element: <Dish />,
       },
       {
         path: '/prato/:id',

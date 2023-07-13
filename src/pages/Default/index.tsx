@@ -3,6 +3,7 @@ import Header from 'components/Header';
 import { Outlet } from 'react-router-dom';
 import stylesTheme from 'styles/Theme.module.scss';
 import Footer from 'components/Footer';
+import { Suspense } from 'react';
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
       <Nav />
       <Header />
       <div className={stylesTheme.container}>
-        <Outlet />
+        <Suspense fallback={<p>Carregando...</p>}>
+          <Outlet />
+        </Suspense>
       </div>
       <Footer />
     </main>

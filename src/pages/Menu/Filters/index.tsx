@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import filters from './filters.json';
 import styles from './Filters.module.scss';
 import classNames from 'classnames';
@@ -33,4 +34,4 @@ function Filters({ filter, setFilter }: PropsFilters) {
   );
 }
 
-export default Filters;
+export default memo(Filters);

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import styles from './Computer.module.scss';
 import options from './options.json';
 import classNames from 'classnames';
@@ -49,4 +49,4 @@ function Computer({ computer, setComputer }: PropsComputer) {
   );
 }
 
-export default Computer;
+export default memo(Computer);
